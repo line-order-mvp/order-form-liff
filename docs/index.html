@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>LINE注文フォーム</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section id="statusPanel" class="status-card" aria-live="polite">
+        <p class="eyebrow">LINEからかんたん注文</p>
+        <h1 id="statusTitle">注文画面を準備しています</h1>
+        <p id="statusMessage">LINEアプリと接続しています。少しだけお待ちください。</p>
+      </section>
+
+      <iframe
+        id="orderFrame"
+        class="order-frame is-hidden"
+        title="注文フォーム"
+        allow="clipboard-write"
+      ></iframe>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
